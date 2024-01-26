@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <style>
+        html, body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #f4f4f4;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .Bk-frm {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .frm-d {
+            flex: 1;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+    
+        
+        }
+
+        .frm-img {
+            flex: 1;
+            background: url('https://img.freepik.com/free-photo/view-frame-with-blue-cleaning-products_23-2148357453.jpg') center/cover no-repeat;
+            position: relative;
+        }
+
+
+        h2 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 3px;
+            color: #333333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 3px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background-color: #4caf50;
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: auto;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .para {
+    text-align: center;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    padding: 60px; 
+}
+.para h3{
+    text-align: center;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    padding: 60px
+}
+    </style>
+</head>
+<body>
+    <div class="Bk-frm">
+        <div class="frm-d">
+            <form method="POST"  onsubmit="return showSuccess()">
+                <h2>Booking Details</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone No:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="cleaning_category">Choose a cleaning:</label>
+               
+                <select id="cleaning_category" name="cleaning_category">
+                 <option value="volvo">Platinum Pro</option>
+                 <option value="saab">Platinum</option>
+                 <option value="opel">Must Wash</option>
+                 <option value="audi">More Wash</option>
+                 <option value="audi">Seat Cleaning</option>
+                 <option value="audi">Outside</option>
+                 <option value="audi">Inside</option>
+                <option value="audi">Wax Clean</option>
+               <option value="audi">Full Pack(home)</option>
+               <option value="audi">Inside</option>
+               <option value="audi">Outside</option>
+               <option value="audi">Bathroom</option>
+               <option value="audi">Visiting Hall</option>
+               <option value="audi">Parking Area</option>
+               <option value="audi">Garden</option>
+               <option value="audi">Roof</option>
+               <option value="audi">Pet cleaning</option>
+               <option value="audi">AC repair</option>
+               <option value="audi">Ironing</option>
+               <option value="audi">dry cleaning</option>
+   
+                </select>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <input type="submit" class="submit-btn" value="Book">
+            </form>
+        </div>
+        <div class="frm-img">
+            
+            <p class="para"><span>WELCOME!</span><br>
+            Welcome to the WeWash in booking to best service you. please select the our location you intend to redeem your services at.
+            <br><br>
+            Some services may be available at all locations or may have compatibility issues with our various Point-Of-Sale systems when used at locations other than selected.
+            <br> <br><b>Thank You!</b>   </p>
+        
+        </div>
+    </div>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "service";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $location = $_POST['location'];
+        $cleaning_category = $_POST['cleaning_category'];
+        $date = $_POST['date'];
+        $time = $_POST['time'];
+
+        $sql = "INSERT INTO booking (name, email, phone, location, cleaning_category, date, time)
+                VALUES ('$name', '$email', '$phone', '$location', '$cleaning_category', '$date', '$time')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $conn->close();
+    }
+    ?>
+     <script>
+        function showSuccess() {
+            alert('Thank you! <br> Booking successfully completed!');
+           return true; 
+        }
+    </script>
+</body>
+</html>
