@@ -32,9 +32,7 @@ html{
     scroll-padding-top: 6rem;
 }
 
-body{
-    background:#f7f7f7;
-}
+
 section{
     padding: 2rem 9%;
 }
@@ -47,9 +45,7 @@ section{
     color: #666;
 }
 
-.heading span{
-    color: var(--red);
-}
+
 .btn{
     display:inline-block;
     padding: .8rem 3rem;
@@ -89,7 +85,7 @@ section{
     }
 }
 
-.order .row{
+.booking .row{
     padding: 2rem;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     background: #fff;
@@ -99,18 +95,18 @@ section{
 
 }
 
-.order .row form{
+.booking .row form{
     flex: 1 1 50rem;
     padding: 1rem;
 
 }
-.order .row form .inputBox{
+.booking .row form .inputBox{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.order .row form .inputBox input, .order .row form textarea{
+.booking .row form .inputBox input, .order .row form textarea{
     padding: 1rem;
     margin:1rem 0;
     font-size: 1.7rem; 
@@ -120,17 +116,17 @@ section{
     border-radius: .5rem;
     width:49%;
 }
-.order .row form textarea{
+.booking .row form textarea{
     width:100%;
     resize:none;
     height:10rem;
 
 }
-.order .row form .btn{
+.booking .row form .btn{
     background:none;
 
 }
-.order .row form .btn:hover{
+.booking .row form .btn:hover{
     background: var(--red);
 }
 @media(max-width:991px){
@@ -139,42 +135,6 @@ section{
         padding:2rem;
     }
 }
-
- .lg_body{
-    background: url('restaurant.jpg') no-repeat;
-    background-size: cover;
- }
- .lg-form{
-    width: 350px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    color:#fff;
- }
- .lg-form p{
-    font-size: 20px;
-    margin: 15px 0;
- }
- .lg-form input{
-    font-size: 16px;
-    width: 100%;
-    padding: 15px 10px;
-    border: 0;
-    outline: none;
-    border-radius: 5px;
-
- }
- .lg-form button{
-    font-size: 18px;
-    font-weight: bold;
-    margin: 20px 0;
-    padding: 10px 15px;
-    width: 50%;
-    border-radius: 5px;
-    border: 0;
-
- }
  .container {
       display: flex;
     }
@@ -184,7 +144,7 @@ section{
     }
 
     .row {
-            width: 48%; /* Adjust the width as needed */
+            width: 48%; 
             background: #fff;
             padding: 2rem;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -192,7 +152,7 @@ section{
             margin-bottom: 20px;
         }
         .line {
-            width: 48%; /* Adjust the width as needed */
+            width: 48%; 
             background: #fff;
             padding: 2rem;
             box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
@@ -219,11 +179,26 @@ section{
     width: 300px;
     padding: 0.2rem;
   }
-
+  .back-btn {
+   
+   color: white;
+   padding: 12px 30px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 16px;
+   font-weight: bold;
+   width: auto;
+   margin-left: 1100px;
+   
+}
     </style>
 </head>
 <body>
-<section  class="order"  id="order">
+
+<button type="submit" class="back-btn"><a href ="index.html">Back</a></button>
+
+<section  class="booking"  id="booking">
 <div class="container">
 <div class="row">
         <h1 class="heading">Contact-us email form</h1>
@@ -263,35 +238,32 @@ section{
     <script>
         function showSuccess() {
             alert('Message sent successfully!');
-           return true; 
+           return ; 
         }
     </script>
 
     <?php
-// Database connection parameters
+
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "service";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// If the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
+
     $firstName = $_POST["first_name"];
     $lastName = $_POST["last_name"];
     $phone = $_POST["phone"];
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    // SQL query to insert data into the database
+    
     $sql = "INSERT INTO cleaning (first_name, last_name, phone, email, message)
             VALUES ('$firstName', '$lastName', '$phone', '$email', '$message')";
 
@@ -302,7 +274,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Close the database connection
 $conn->close();
 ?>
 
