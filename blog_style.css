@@ -103,13 +103,13 @@ body{
         width: 300px;
     }
 }
-@media(max-width:1100px;){
+@media(max-width:1100px){
     .blog-box{
         width: 70%;
     }
 }
 @media(max-width:550px){
-    ,blog-box{
+    .blog-box{
         margin: 20px 10px;
         width: 100%;
     }
@@ -125,7 +125,7 @@ body{
 }
 .list{
     width: 40%;
-    background-color: rgb(198, 233, 245);
+    background-color: rgb(231, 239, 241);
     text-align: center;
 }
 .list h2 {
@@ -134,14 +134,29 @@ body{
     font-weight: 600;
     text-decoration: underline; 
 }
+    .list ul {
+        text-align: left;
+        position: relative; 
+    }
+    .list ul li::before {
+        content: '\2713'; 
+        color: blue;
+        font-size: 1.2em;
+        margin-right: 5px;
+       
+    }
 .post{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    text-align: left ;
 }
 .post img{
-    width: 80%;
+    width: 70%;
+    max-height: 50%;
+    align-items: right;
+    
 }
 
 
@@ -153,8 +168,8 @@ body{
 }
 
 #search-input {
-    padding: 10px 90px;
-    font-size: 18px;
+    padding: 10px 40px;
+    font-size: 21px;
     border: 1px solid #ccc;
     border-radius: 4px 0 0 4px;
     outline: none;
@@ -162,7 +177,7 @@ body{
 
 #search-button {
     padding: 10px 30px;
-    font-size: 18px;
+    font-size: 21px;
     border: 1px solid #ccc;
     border-radius: 0 4px 4px 0;
     background-color: #3206ac;
@@ -173,4 +188,17 @@ body{
 
 #search-button:hover {
     background-color: #42a4d1;
+}
+.back-btn {
+   
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: auto;
+    margin-left: 1100px;
+    
 }
