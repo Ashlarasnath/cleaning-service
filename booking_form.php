@@ -52,7 +52,7 @@
         h2 {
             text-align: center;
             color: #333333;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         label {
@@ -72,6 +72,17 @@
 
         .submit-btn {
             background-color: #4caf50;
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: auto;
+        }
+       .back-btn {
+            background-color: rgb(190, 0, 0) ;
             color: #ffffff;
             padding: 12px 20px;
             border: none;
@@ -153,6 +164,8 @@
                 <input type="time" id="time" name="time" required>
 
                 <input type="submit" class="submit-btn" value="Book">
+                
+                <button onclick="goBack()" class="back-btn"> Back</button>
             </form>
         </div>
         <div class="frm-img">
@@ -201,9 +214,19 @@
     ?>
      <script>
         function showSuccess() {
-            alert('Thank you! <br> Booking successfully completed!');
+            alert('Thank you! Your Booking successfully completed!');
            return true; 
         }
+
+        
+    
+        function goBack() {
+        alert('Back to Home');
+        window.location.href = 'index.html';
+        return false; 
+    }
+    
+  
     </script>
 </body>
 </html>
