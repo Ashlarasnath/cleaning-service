@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="styles.css">
     <style>
         h1, h2{
             text-align: center;
@@ -35,12 +38,132 @@
    margin-left: 1100px;
    
 }
+
+@media (max-width: 768px) {
+  .header {
+    height: 60px;
+    left: 0;
+    right: 0;
+  }
+
+  #logo {
+    width: 150px;
+    margin-left: 10px;
+  }
+
+  nav > ul {
+    margin-left: 0;
+  }
+  .footer {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
+    height: 200px;
+  }
+
+  .social-media {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .social-media .credit {
+    padding: 1rem 0;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    height: 70px;
+  }
+
+  #logo {
+    width: 180px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .header {
+    height: 80px;
+  }
+
+  #logo {
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .content {
+    margin-right: 0; 
+  }
+  img {
+    max-width: 100%; 
+  }
+}
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .content {
+        width: 50%;
+    }
+
+    .image {
+        width: 50%;
+    }
+}
+
         </style>
 </head>
 <body>
+  <header>
+    <img id="logo" src="https://bundesverband-micro-living.de/wp-content/uploads/2021/11/Logo_WeWash.png">
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="booking.html">Booking</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Service
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about.html">About</a></li>
+            <li><a class="dropdown-item" href="service.html">Our Services</a></li>
+          
+            <li><a class="dropdown-item" href="contact.php">Contact</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+       
+      </ul>
+     
+    </div>
+  </div>
+</nav>
 
-<button type="submit" class="back-btn"><a href ="index.html">Back</a></button>
-    <h1> About us</h1>
+    
+  </header>
+
+
+<br><br><br><br>
+    <h1> About us</h1><br>
     <p style="text-align: center;">Welcome to our services website! We provide a range of service to help you with any of your needs. From home cleaning, pet maintaining, laundry and vehicle cleaning and more. Our experienced staff will work with you to ensure you get the most out of our services. We can help with anything from our services. <br>
     No matter what your needs are, we're here to help. If you have any questions, don't hesitate to contact us. We look forward to helping you with any of your service needs.</p>
 <section>
@@ -50,7 +173,7 @@
   <div class="">
     <img src="https://herculescleaning.com/wp-content/uploads/2020/03/Hercules-Services-cleaning-jobs-join-our-team.png">
  </div>
-
+<br>
   <div class="content">
     
     <p style="margin-right: 100px;">We provide a convenient, consistent and exceptional wash experience.</p>
@@ -61,16 +184,14 @@
 <section>
     <h2>Our Vision</h2>
  <div class="container">
-
- <div class="content" style="margin-left:380px">
-    
-    <p>To be the world's most admired wash company by enriching the lives of our teammates and customers.</p>
-  </div>
-
   <div class="" >
-    <img src="https://herculescleaning.com/wp-content/uploads/2020/03/Hercules-Services-cleaning-jobs-join-our-team.png" style="max-width: 100%">
+    <img src="https://herculescleaning.com/wp-content/uploads/2020/03/Hercules-Services-cleaning-jobs-join-our-team.png">
      </div>
-
+<br>
+     <div class="content">
+    
+      <p  style="margin-right: 100px;">To be the world's most admired wash company<br> by enriching the lives of our teammates and customers.</p>
+    </div>
 </section>
 <hr>
 <section>
@@ -78,9 +199,9 @@
   
   <div class="container">
     <div class="">
-      <img src="https://herculescleaning.com/wp-content/uploads/2020/03/Hercules-Services-cleaning-jobs-join-our-team.png" style="max-width: 100%">
+      <img src="https://herculescleaning.com/wp-content/uploads/2020/03/Hercules-Services-cleaning-jobs-join-our-team.png">
    </div>
-  
+  <br>
     <div class="content">
       
       <p style="margin-left: 20px;">We work together as a team to build a better wash experience and company. We are accountable to each other; we do what we say we will do. We clean with integrity in all we do by doing the right thing when no one is looking. We care about our teammates, our customers, and our communities. We are empathetic, polite, and caring in all of our interactions.</p>
@@ -91,18 +212,24 @@
     <h2>Our Partners</h2>
  <div class="container">
 
- <div class="content" style="margin-left:350px">
-    
+ 
+  <div class="" >
+    <img src="https://herculescleaning.com/wp-content/uploads/2020/03/Hercules-Services-cleaning-jobs-join-our-team.png">
+     </div>
+<br>
+     <div class="content" style="margin-left:50px">
     <p>We provide a convenient, consistent and exceptional wash experience. We like to say that we are not in the wash business serving people, but in the people's business serving washes. Our employees, whom we call partners, are at the heart of the We Wash experience.<br>
-    We are committed to making our partners proud, investing in their health, well-being, and success, and creating a culture of belonging where everyone is welcome.
+    We are committed to making our partners proud,  and creating a culture of belonging where everyone is welcome.
     </p>
   </div>
 
-  <div class="" >
-    <img src="https://herculescleaning.com/wp-content/uploads/2020/03/Hercules-Services-cleaning-jobs-join-our-team.png" style="max-width: 120%">
-     </div>
+ 
 
 </section>
+
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 </body>
 
 </html>
