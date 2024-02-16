@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="styles.css">
+
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
@@ -179,24 +182,113 @@ section{
     width: 300px;
     padding: 0.2rem;
   }
-  .back-btn {
-   
-   color: white;
-   padding: 12px 30px;
-   border: none;
-   border-radius: 4px;
-   cursor: pointer;
-   font-size: 16px;
-   font-weight: bold;
-   width: auto;
-   margin-left: 1100px;
-   
+@media (max-width: 768px) {
+  .header {
+    height: 60px;
+    left: 0;
+    right: 0;
+  }
+
+  #logo {
+    width: 150px;
+    margin-left: 10px;
+  }
+
+  nav > ul {
+    margin-left: 0;
+  }
+  .footer {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
+    height: 200px;
+  }
+
+  .social-media {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .social-media .credit {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .header {
+    height: 70px;
+  }
+
+  #logo {
+    width: 180px;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    height: 80px;
+  }
+
+  #logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .row, .line {
+    width: 100%; 
+  }
 }
     </style>
 </head>
 <body>
+<header>
+    <img id="logo" src="https://bundesverband-micro-living.de/wp-content/uploads/2021/11/Logo_WeWash.png">
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="booking.html">Booking</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Service
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about.html">About</a></li>
+            <li><a class="dropdown-item" href="service.html">Our Services</a></li>
+          
+            <li><a class="dropdown-item" href="contact.php">Contact</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+       
+      </ul>
+     
+    </div>
+  </div>
+</nav>
 
-<button type="submit" class="back-btn"><a href ="index.html">Back</a></button>
+    
+  </header>
+  <br><br><br><br>
+
 
 <section  class="booking"  id="booking">
 <div class="container">
@@ -276,6 +368,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+   <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 </body>
 </html>
