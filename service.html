@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>service</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="styles.css">
     <style>
         .head {
             text-align: center;
@@ -89,12 +92,116 @@
    margin-left: 1100px;
    
 }
+/* For screens smaller than 768px (phones) */
+@media (max-width: 768px) {
+  .header {
+    height: 60px;
+    left: 0;
+    right: 0;
+  }
 
+  #logo {
+    width: 150px;
+    margin-left: 10px;
+  }
+
+  nav > ul {
+    margin-left: 0;
+  }
+
+
+  .footer {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
+    height: 200px;
+  }
+
+  .social-media {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .social-media .credit {
+    padding: 1rem 0;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    height: 70px;
+  }
+
+  #logo {
+    width: 180px;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    height: 80px;
+  }
+
+  #logo {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+        section {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        div {
+            flex: 1 1 100%;
+        }
+    }
     </style>
 </head>
 <body>
-
-<button type="submit" class="back-btn"><a href ="index.html">Back</a></button>
+    <header>
+        <img id="logo" src="https://bundesverband-micro-living.de/wp-content/uploads/2021/11/Logo_WeWash.png">
+        
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="booking.html">Booking</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Service
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+                <li><a class="dropdown-item" href="service.html">Our Services</a></li>
+              
+                <li><a class="dropdown-item" href="contact.php">Contact</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+           
+          </ul>
+         
+        </div>
+      </div>
+    </nav>
+    
+        
+      </header>
+      <br><br><br><br><br>
     <h1 class="head">Our Services</h1>
     <p class="head">We offer a wide range of services in creative spheres. Here is what we can offer...</p>
     <ul class="books-grid">
@@ -179,17 +286,21 @@
 
     <section>
         <div>
-            <img class="team" src="https://www.shutterstock.com/image-photo/portrait-happy-diverse-janitors-office-600nw-2171553615.jpg">
+            <img class="team" src="https://www.shutterstock.com/image-photo/portrait-happy-diverse-janitors-office-600nw-2171553615.jpg" style="width: 50%;">
             <h2>THE PERFECT TEAM</h2>
             <p>As the preferred WE WASH company, we only hire the most passionate power washers for our work family. Once hired, every workers goes through hundreds of hours of training before being PPw-approved to clean your home and everything. We ensure all of our team members understand our dedication to customer satisfaction so that they WOW you every time. </p>
         </div>
         <div>
-        <img class="team" src="https://www.unoclean.com/Maintenance-Equipment/Restroom-Cleaning-Systems/Tile-and-Grout-Restroom-Cleaning-Equipment.jpg">
+        <img class="team" src="https://www.unoclean.com/Maintenance-Equipment/Restroom-Cleaning-Systems/Tile-and-Grout-Restroom-Cleaning-Equipment.jpg" style="width: 20%;" >
             <h2>THE PERFECT EQUIPMENT</h2>
             <p>Perfect wash is committed to using the best cleaners and equipment for your home and environment. Any cleansers we use are 100% biodegradable, so choosing us will protect your garden and outdoor pets. our roof treatments use a proprietary algaecide that eliminates harmful living organisms like lichens. </p>
         </div>
         
     </section>
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 </body>
 </html>
 
