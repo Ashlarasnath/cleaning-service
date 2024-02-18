@@ -1,206 +1,233 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeWash | Booking</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <style>
-       /* body{
-            background-image: url('https://static.wixstatic.com/media/11062b_a75563617bcd48d5aa4f10a733fbe2b6~mv2.jpg/v1/fill/w_640,h_712,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_a75563617bcd48d5aa4f10a733fbe2b6~mv2.jpg');
+      body {
+        /* background-image: url('https://static.wixstatic.com/media/11062b_a75563617bcd48d5aa4f10a733fbe2b6~mv2.jpg/v1/fill/w_640,h_712,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/11062b_a75563617bcd48d5aa4f10a733fbe2b6~mv2.jpg'); */
+        padding: 10%;
+      }
 
-        }*/
-        h1{
-            text-align: center;
-            color: maroon;
+      h1 {
+        text-align: center;
+        color: maroon;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .btn {
+        background-color: rgb(102, 102, 211);
+        border: none;
+        cursor: pointer;
+        width: 10rem;
+      }
+
+      @keyframes shake {
+        0%,
+        100% {
+          transform: translateX(0);
         }
+
+        25%,
+        75% {
+          transform: translateX(-5px);
+        }
+
+        50% {
+          transform: translateX(5px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          height: 60px;
+          left: 0;
+          right: 0;
+        }
+
+        #logo {
+          width: 150px;
+          margin-left: 10px;
+        }
+
+        nav > ul {
+          margin-left: 0;
+        }
+
+        .img2 {
+          margin-left: 50px;
+        }
+
+        .img3 {
+          margin-left: 50px;
+        }
+
+        .footer {
+          width: 100%;
+        }
+
+        .map {
+          width: 100%;
+          height: 200px;
+        }
+
+        .social-media {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .social-media .credit {
+          padding: 1rem 0;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .header {
+          height: 70px;
+        }
+
+        #logo {
+          width: 180px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .header {
+          height: 80px;
+        }
+
+        #logo {
+          width: 200px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
         table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+          overflow-x: auto;
         }
 
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
+        td,
         th {
-            background-color: #f2f2f2;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 50px;
         }
+      }
 
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .btn {
-            background-color: rgb(102, 102, 211);
-            color: white;
-            padding: 5px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            position: absolute;
-            left: 500px; 
-            text-align: center;
-            display:inline-block;
-            margin-left: 600px;
-        }
+      @media screen and (max-width: 768px) {
+      }
+    </style>
+  </head>
 
-@keyframes shake {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    25%, 75% {
-        transform: translateX(-5px);
-    }
-    50% {
-        transform: translateX(5px);
-    }
-}
-@media (max-width: 768px) {
-  .header {
-    height: 60px;
-    left: 0;
-    right: 0;
-  }
-
-  #logo {
-    width: 150px;
-    margin-left: 10px;
-  }
-
-  nav > ul {
-    margin-left: 0;
-  }
-
-  .img2 {
-    margin-left: 50px;
-  }
-
-  .img3 {
-    margin-left: 50px;
-  }
-
-  .footer {
-    width: 100%;
-  }
-
-  .map {
-    width: 100%;
-    height: 200px;
-  }
-
-  .social-media {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .social-media .credit {
-    padding: 1rem 0;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .header {
-    height: 70px;
-  }
-
-  #logo {
-    width: 180px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .header {
-    height: 80px;
-  }
-
-  #logo {
-    width: 200px;
-  }
-}
-@media screen and (max-width: 768px) {
-        table {
-            overflow-x: auto;
-        }
-
-        td, th {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width:50px; 
-        }
-    }
-    @media screen and (max-width: 768px) {
-        .btn {
-            width: 30%;
-            max-width: 30px;
-            margin: 0 ; 
-            display: block;
-        }
-    }
-  </style>
-</head>
-<body>
+  <body>
     <header>
-        <img id="logo" src="https://bundesverband-micro-living.de/wp-content/uploads/2021/11/Logo_WeWash.png">
-        
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="booking.html">Booking</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Service
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="about.html">About</a></li>
-                <li><a class="dropdown-item" href="service.html">Our Services</a></li>
-              
-                <li><a class="dropdown-item" href="contact.php">Contact</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-           
-          </ul>
-         
+      <img
+        id="logo"
+        src="https://bundesverband-micro-living.de/wp-content/uploads/2021/11/Logo_WeWash.png"
+      />
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="booking.html">Booking</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Service
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
+                  <li>
+                    <a class="dropdown-item" href="service.html"
+                      >Our Services</a
+                    >
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="contact.php">Contact</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
     </header>
 
-<br><br><br><br>
-<div>
-    <a href="booking_form.php" class="btn btn-primary btn-block">BOOK NOW</a>
-    </div>
+    <br /><br />
 
-    <h1>Booking Details</h1>
+    <div class="row w-100">
+      <div class="col-8"><h1>Booking Details</h1></div>
+      <div class="col-1"></div>
+      <div class="col-3 d-flex flex-column justify-content-around">
+        <a href="booking_form.html" class="btn btn-primary">BOOK NOW</a>
+      </div>
+    </div>
     <div>
-    <table>
-    <thead>
-        <tr>
+      <table>
+        <thead>
+          <tr>
             <th colspan="9">Vehicle Cleaning Packages</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td></td>
             <td>Platinum Pro</td>
             <td>Platinum</td>
@@ -210,8 +237,8 @@
             <td>Outside</td>
             <td>Inside</td>
             <td>Wax Clean</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Price</td>
             <td>$50</td>
             <td>$40</td>
@@ -221,22 +248,20 @@
             <td>$15</td>
             <td>$10</td>
             <td>$35</td>
-        </tr>
-    </tbody>
-</table>
-
-
+          </tr>
+        </tbody>
+      </table>
     </div>
-<br>
+    <br />
     <div>
-    <table>
-    <thead>
-        <tr>
+      <table>
+        <thead>
+          <tr>
             <th colspan="9">Home Cleaning Packages</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td></td>
             <td>Full Pack</td>
             <td>Inside</td>
@@ -246,8 +271,8 @@
             <td>Parking Area</td>
             <td>Garden</td>
             <td>Roof</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Price</td>
             <td>$250</td>
             <td>$100</td>
@@ -257,46 +282,44 @@
             <td>$90</td>
             <td>$100</td>
             <td>$135</td>
-        </tr>
-        
-    </tbody>
-</table>
- </div>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-    <br>
+    <br />
     <div>
-    <table>
-    <thead>
-        <tr>
+      <table>
+        <thead>
+          <tr>
             <th colspan="9">Other Cleaning Packages</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td></td>
             <td>Pet cleaning</td>
             <td>AC repair</td>
             <td>Ironing</td>
             <td>dry cleaning</td>
-           
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Price</td>
             <td>$250</td>
             <td>$200</td>
             <td>$80</td>
             <td>$110</td>
-            
-        </tr>
-        
-    </tbody>
-</table>
-
-
+          </tr>
+        </tbody>
+      </table>
     </div>
-<br><br>
-<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <br /><br />
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
