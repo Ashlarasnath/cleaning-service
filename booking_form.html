@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Form</title>
+    <title>WeWash | Booking Form</title>
     <style>
         html, body {
             font-family: 'Poppins', sans-serif;
@@ -179,39 +179,7 @@
         </div>
     </div>
 
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "service";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $location = $_POST['location'];
-        $cleaning_category = $_POST['cleaning_category'];
-        $date = $_POST['date'];
-        $time = $_POST['time'];
-
-        $sql = "INSERT INTO booking (name, email, phone, location, cleaning_category, date, time)
-                VALUES ('$name', '$email', '$phone', '$location', '$cleaning_category', '$date', '$time')";
-
-        if ($conn->query($sql) === TRUE) {
-            echo "";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-
-        $conn->close();
-    }
-    ?>
+   
      <script>
         function showSuccess() {
             alert('Thank you! Your Booking successfully completed!');
